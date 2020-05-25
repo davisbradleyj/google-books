@@ -10,13 +10,13 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/public"));
+  app.use(express.static("client/build"));
 }
 // Add routes, both API and view
 app.use(routes);
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://<dbuser>:<dbpassword>@ds125871.mlab.com:25871/heroku_pn2vgqc0");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:3000/google-books", { useNewUrlParser: true });
 
 // Start the API server
 app.listen(PORT, function() {
