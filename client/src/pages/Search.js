@@ -19,7 +19,7 @@ class SearchPage extends Component {
     }
 
     componentDidMount() {
-        this.searchBooks("");
+        this.searchBooks("Harry Potter");
     }
 
     searchBooks = query => {
@@ -56,8 +56,7 @@ class SearchPage extends Component {
 
     render() {
         return (
-            <div className="container pt-5 mt-5">
-                {/* <Navbar /> */}
+            <div className="container pt-3 mt-1">
                 <SearchForm change={this.handleInputChange}
                     clicked={this.handleSearchClick}
                     searchValue={this.state.search}
