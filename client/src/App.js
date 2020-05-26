@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import NavBar from "./components/NavBar/NavBar.js"
+import NavBar from "./components/NavBar/NavBar"
+import Jumbotron from "./components/Jumbotron/Jumbotron"
 import Search from "./pages/Search.js"
 import Save from "./pages/Save.js"
 import NoMatch from "./pages/NoMatch.js"
@@ -11,6 +12,7 @@ function App() {
     <Router>
     <div className="bg-light">
         <NavBar />
+        <Jumbotron />
         <Switch>
           <Route exact path="/" component={Search} />
           <Route exact path="/saved" component={Save} />
