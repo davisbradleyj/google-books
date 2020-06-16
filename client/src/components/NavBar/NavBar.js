@@ -2,7 +2,7 @@ import React from "react";
 
 function Navbar() {
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-secondary mb-2 fixed-top">
+        <nav className="navbar navbar-expand-sm navbar-light bg-secondary mb-2 fixed-top">
             <a className="navbar-brand text-white" href="/">Google Books</a>
             <ul className="nav">
                 <li className="nav-item">
